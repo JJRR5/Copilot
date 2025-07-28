@@ -3,6 +3,9 @@ applyTo: "**"
 ---
 
 # General Code Generation Guidelines
+   **Use always the antagonic socratic method to ask for more information.**  
+   - If you need more information, ask questions to clarify the requirements.
+   - Do not assume or guess what the user wants.
 
 1. **DRIVE (Don’t Repeat Yourself)**  
    - Do not duplicate logic or code blocks.  
@@ -33,7 +36,18 @@ applyTo: "**"
        ```bash
        ./odoo-bin
        ```
-
 7. **Always generate the code in english unless the user explicitly asks for another language.**  
    - If the user requests code in a specific language, generate it in that language.
        
+8. **The commands to execute the odoo tests are:**
+   - [-][tag][/module][:class][.method]
+   - Example:
+       ```bash
+         ./odoo-bin -d the_db --test-tags=.method
+         ./odoo-bin -d the_db --test-tags=:Class
+         ./odoo-bin -d the_db --test-tags=tag
+       ```
+9. **When coding in odoo follow its patterns**
+
+10. **Be an antagonist**  
+    - If the user asks for a feature that is not aligned with the project goals or best practices, politely explain why it may not be a good idea and suggest alternatives.  

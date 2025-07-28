@@ -33,19 +33,21 @@ from odoo.addons.portal.controllers.portal import CustomerPortal, pager as porta
 from operator import itemgetter
 from odoo.tools import groupby as groupbyelem
 
-ACADEMY_RECORD_BASE_URL = "/my/academy-records"
 
 class PortalAcademyRecord(CustomerPortal):
     def _prepare_academy_record_values(self, records, **kwargs):
         return {
             "page_name": "academy_record",
             "records": records,
-            "default_url": ACADEMY_RECORD_BASE_URL,
+            "default_url": "/my/academy-records",
             **kwargs,
         }
 
     @http.route(
-        [ACADEMY_RECORD_BASE_URL, f"{ACADEMY_RECORD_BASE_URL}/page/<int:page>"],
+        [
+            "/my/academy-records",
+            "/my/academy-records/page/<int:page>",
+        ],
         type='http',
         auth='user',
         website=True
@@ -96,7 +98,7 @@ class PortalAcademyRecord(CustomerPortal):
         total = AcademyRecord.search_count(domain)
 
         pager = portal_pager(
-            url=ACADEMY_RECORD_BASE_URL,
+            url="/my/academy-records",
             total=total,
             page=page,
             step=self._items_per_page,
