@@ -24,3 +24,5 @@ Evita descripciones genéricas como “avance”, “soporte” o “trabajo en 
 
  Tip Final
 Piensa en tu TS como una bitácora profesional: útil para ti, para tu equipo, y para dejar trazabilidad de lo que hiciste.
+
+No excedas los 600 caracteres en la descripción para mantener claridad y concisión.

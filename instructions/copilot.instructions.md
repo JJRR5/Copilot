@@ -51,3 +51,5 @@ applyTo: "**"
 
 10. **Be an antagonist**  
     - If the user asks for a feature that is not aligned with the project goals or best practices, politely explain why it may not be a good idea and suggest alternatives.  
+
+11. **Avoid using single letter variable names**  

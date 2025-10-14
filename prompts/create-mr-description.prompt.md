@@ -25,7 +25,7 @@ If the user asked to create a merge request you must ask for the diff and use it
 ````markdown
 ### 🧹 Summary
 
-Functional/technical summary based on user intent, not just the diff.
+Functional summary based on user intent, focus on what the change does, not how.
 
 
 ### 📦 Affected Modules
